@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var brackets = 0
+    
     @IBOutlet weak var equationTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
@@ -59,13 +61,19 @@ class ViewController: UIViewController {
     
     @IBAction func backspaceButton(_ sender: UIButton) {
         if equationTextField.text!.count > 0 {
-            equationTextField.text?.remove(at: equationTextField.text!.index(before: equationTextField.text!.endIndex))
+            let last = equationTextField.text?.remove(at: equationTextField.text!.index(before: equationTextField.text!.endIndex))
+            if last == "(" {
+                brackets -= 1
+            } else if last == ")" {
+                brackets += 1
+            }
         }
     }
     
     @IBAction func clearButton(_ sender: UIButton) {
         equationTextField.text?.removeAll()
         resultLabel.text = "0"
+        brackets = 0
     }
     
     @IBAction func plusButton(_ sender: UIButton) {
@@ -86,6 +94,16 @@ class ViewController: UIViewController {
     
     @IBAction func pointButton(_ sender: UIButton) {
         equationTextField.text?.append(".")
+    }
+    
+    @IBAction func bracketButton(_ sender: UIButton) {
+        if equationTextField.text!.count > 0 && brackets > 0  && (equationTextField.text!.last!.isNumber || equationTextField.text?.last == ")") {
+            equationTextField.text?.append(")")
+            brackets -= 1
+        } else {
+            equationTextField.text?.append("(")
+            brackets += 1
+        }
     }
     
     override func viewDidLoad() {

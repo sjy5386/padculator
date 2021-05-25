@@ -79,6 +79,9 @@
                                                         <rect key="frame" x="101" y="0.0" width="56" height="89"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                         <state key="normal" title="( )"/>
+                                                        <connections>
+                                                            <action selector="bracketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dc9-UA-cqd"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-ka-ORg">
                                                         <rect key="frame" x="213" y="0.0" width="52" height="89"/>
