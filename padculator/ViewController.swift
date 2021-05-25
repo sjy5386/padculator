@@ -17,6 +17,77 @@ class ViewController: UIViewController {
         resultLabel.text = String(result!)
     }
     
+    @IBAction func button0(_ sender: UIButton) {
+        equationTextField.text?.append("0")
+    }
+    
+    @IBAction func button1(_ sender: UIButton) {
+        equationTextField.text?.append("1")
+    }
+    
+    @IBAction func button2(_ sender: UIButton) {
+        equationTextField.text?.append("2")
+    }
+    
+    @IBAction func button3(_ sender: UIButton) {
+        equationTextField.text?.append("3")
+    }
+    
+    @IBAction func button4(_ sender: UIButton) {
+        equationTextField.text?.append("4")
+    }
+    
+    @IBAction func button5(_ sender: UIButton) {
+        equationTextField.text?.append("5")
+    }
+    
+    @IBAction func button6(_ sender: UIButton) {
+        equationTextField.text?.append("6")
+    }
+    
+    @IBAction func button7(_ sender: UIButton) {
+        equationTextField.text?.append("7")
+    }
+    
+    @IBAction func button8(_ sender: UIButton) {
+        equationTextField.text?.append("8")
+    }
+    
+    @IBAction func button9(_ sender: UIButton) {
+        equationTextField.text?.append("9")
+    }
+    
+    @IBAction func backspaceButton(_ sender: UIButton) {
+        if equationTextField.text!.count > 0 {
+            equationTextField.text?.remove(at: equationTextField.text!.index(before: equationTextField.text!.endIndex))
+        }
+    }
+    
+    @IBAction func clearButton(_ sender: UIButton) {
+        equationTextField.text?.removeAll()
+        resultLabel.text = "0"
+    }
+    
+    @IBAction func plusButton(_ sender: UIButton) {
+        equationTextField.text?.append("+")
+    }
+    
+    @IBAction func minusButton(_ sender: UIButton) {
+        equationTextField.text?.append("-")
+    }
+    
+    @IBAction func timesButton(_ sender: UIButton) {
+        equationTextField.text?.append("*")
+    }
+    
+    @IBAction func divideButton(_ sender: UIButton) {
+        equationTextField.text?.append("/")
+    }
+    
+    @IBAction func pointButton(_ sender: UIButton) {
+        equationTextField.text?.append(".")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
