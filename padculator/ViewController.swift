@@ -95,6 +95,10 @@ class ViewController: UIViewController {
     @IBAction func pointButton(_ sender: UIButton) {
         equationTextField.text?.append(".")
     }
+
+    @IBAction func powButton(_ sender: UIButton) {
+        equationTextField.text?.append("**")
+    }
     
     @IBAction func bracketButton(_ sender: UIButton) {
         if equationTextField.text!.count > 0 && brackets > 0  && (equationTextField.text!.last!.isNumber || equationTextField.text?.last == ")") {

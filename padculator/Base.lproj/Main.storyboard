@@ -97,6 +97,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                         <state key="normal" title="^"/>
+                                                        <connections>
+                                                            <action selector="powButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeA-03-lxH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-bh-qSd">
                                                         <rect key="frame" x="342" y="0.0" width="67" height="89"/>
