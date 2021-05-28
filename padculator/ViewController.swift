@@ -125,7 +125,7 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
         historyGroup = HistoryGroup()
         historyTableView.dataSource = self
     }
@@ -137,7 +137,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell")!
         
         let history = historyGroup.histories[indexPath.row]
         cell.textLabel?.text = history.equation
