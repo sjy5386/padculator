@@ -19,11 +19,16 @@ class ViewController: UIViewController {
 extension ViewController {
     @IBAction func resultButton(_ sender: UIButton) {
         let equation = equationTextField.text!
-        if equation.count > 0 && brackets == 0 && equation.last!.isNumber {
+        if equation.count > 0 && brackets == 0 && (equation.last!.isNumber || equation.last == ")") {
             let result = calculate(equation: equation)!
             equationTextField.text = String(result)
             resultLabel.text = String(result)
             addHistory(history: History(equation: equation, result: result))
+        } else {
+            let alertController = UIAlertController(title: "Error!", message: "Invalid equation.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
 }
