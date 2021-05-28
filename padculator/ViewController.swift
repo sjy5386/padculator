@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var equationTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var historyTableView: UITableView!
 }
 
 extension ViewController {

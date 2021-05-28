@@ -355,11 +355,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HR4-uZ-d6H">
+                                <rect key="frame" x="8" y="101" width="376" height="971"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rZu-Kv-1Bj">
+                                        <rect key="frame" x="0.0" y="28" width="376" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rZu-Kv-1Bj" id="O82-E3-6ZL">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HR4-uZ-d6H" firstAttribute="top" secondItem="Wsi-1q-RFZ" secondAttribute="bottom" constant="8" id="7P6-oG-nxF"/>
+                            <constraint firstItem="D6h-D1-nOg" firstAttribute="leading" secondItem="HR4-uZ-d6H" secondAttribute="trailing" constant="8" id="Mxp-Q4-Mv1"/>
                             <constraint firstItem="Wsi-1q-RFZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Nof-ne-KR0"/>
+                            <constraint firstItem="HR4-uZ-d6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="V8P-FO-VSO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HR4-uZ-d6H" secondAttribute="bottom" constant="8" id="YHP-dP-7hJ"/>
                             <constraint firstItem="D6h-D1-nOg" firstAttribute="top" secondItem="Wsi-1q-RFZ" secondAttribute="bottom" constant="8" id="aQP-zP-mRp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wsi-1q-RFZ" secondAttribute="trailing" constant="8" id="gBI-6e-N6p"/>
                             <constraint firstItem="Wsi-1q-RFZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="h3W-YI-Ej0"/>
@@ -369,6 +387,7 @@
                     </view>
                     <connections>
                         <outlet property="equationTextField" destination="Wsi-1q-RFZ" id="owd-LV-DU1"/>
+                        <outlet property="historyTableView" destination="HR4-uZ-d6H" id="mYd-pG-jCk"/>
                         <outlet property="resultLabel" destination="Dde-gE-4zk" id="nHv-Gt-ZCa"/>
                     </connections>
                 </viewController>
