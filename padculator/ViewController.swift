@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var equationTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var historyTableView: UITableView!
+    var historyGroup: HistoryGroup!
 }
 
 extension ViewController {
@@ -124,5 +125,23 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        historyGroup = HistoryGroup()
+        historyTableView.dataSource = self
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return historyGroup.histories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        
+        let history = historyGroup.histories[indexPath.row]
+        cell.textLabel?.text = history.equation
+        cell.detailTextLabel?.text = String(history.result)
+        return cell
     }
 }
