@@ -11,7 +11,7 @@ class HistoryGroup {
     var histories = [History]()
     
     func addHistory(history: History) {
-        histories.append(history)
+        histories.insert(history, at: 0)
     }
     
     func removeHistory(index: Int) {

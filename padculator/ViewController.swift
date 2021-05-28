@@ -153,7 +153,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController {
     func addHistory(history: History) {
         historyGroup.addHistory(history: history)
-        let indexPath = IndexPath(row: historyGroup.histories.count - 1, section: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
         historyTableView.insertRows(at: [indexPath], with: .automatic)
     }
 }
