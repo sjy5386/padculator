@@ -19,10 +19,12 @@ class ViewController: UIViewController {
 extension ViewController {
     @IBAction func resultButton(_ sender: UIButton) {
         let equation = equationTextField.text!
-        let result = calculate(equation: equation)!
-        equationTextField.text = String(result)
-        resultLabel.text = String(result)
-        addHistory(history: History(equation: equation, result: result))
+        if equation.count > 0 && brackets == 0 && equation.last!.isNumber {
+            let result = calculate(equation: equation)!
+            equationTextField.text = String(result)
+            resultLabel.text = String(result)
+            addHistory(history: History(equation: equation, result: result))
+        }
     }
 }
 
