@@ -12,13 +12,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var equationTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    
+}
+
+extension ViewController {
     @IBAction func resultButton(_ sender: UIButton) {
         let equation = equationTextField.text
         let result = calculate(equation: equation!)
         resultLabel.text = String(result!)
     }
-    
+}
+
+extension ViewController {
     @IBAction func button0(_ sender: UIButton) {
         equationTextField.text?.append("0")
     }
@@ -58,7 +62,9 @@ class ViewController: UIViewController {
     @IBAction func button9(_ sender: UIButton) {
         equationTextField.text?.append("9")
     }
-    
+}
+
+extension ViewController {
     @IBAction func backspaceButton(_ sender: UIButton) {
         if equationTextField.text!.count > 0 {
             let last = equationTextField.text?.remove(at: equationTextField.text!.index(before: equationTextField.text!.endIndex))
@@ -75,7 +81,9 @@ class ViewController: UIViewController {
         resultLabel.text = "0"
         brackets = 0
     }
-    
+}
+
+extension ViewController {
     @IBAction func plusButton(_ sender: UIButton) {
         equationTextField.text?.append("+")
     }
@@ -95,7 +103,7 @@ class ViewController: UIViewController {
     @IBAction func pointButton(_ sender: UIButton) {
         equationTextField.text?.append(".")
     }
-
+    
     @IBAction func powButton(_ sender: UIButton) {
         equationTextField.text?.append("**")
     }
@@ -109,7 +117,9 @@ class ViewController: UIViewController {
             brackets += 1
         }
     }
-    
+}
+
+extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
