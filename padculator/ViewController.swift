@@ -21,8 +21,9 @@ extension ViewController {
         let equation = equationTextField.text!
         if equation.count > 0 && brackets == 0 && (equation.last!.isNumber || equation.last == ")") {
             let result = calculate(equation: equation)!
-            equationTextField.text = String(result)
-            resultLabel.text = String(result)
+            let r = doubleToString(d: result)
+            equationTextField.text = r
+            resultLabel.text = r
             addHistory(history: History(equation: equation, result: result))
         } else {
             let alertController = UIAlertController(title: "Error!", message: "Invalid equation.", preferredStyle: .alert)
@@ -162,7 +163,7 @@ extension ViewController: UITableViewDataSource {
         
         let history = historyGroup.histories[indexPath.row]
         cell.textLabel?.text = history.equation
-        cell.detailTextLabel?.text = String(history.result)
+        cell.detailTextLabel?.text = doubleToString(d: history.result)
         return cell
     }
 }
