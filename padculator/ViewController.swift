@@ -20,6 +20,7 @@ extension ViewController {
     @IBAction func resultButton(_ sender: UIButton) {
         let equation = equationTextField.text!
         let result = calculate(equation: equation)!
+        equationTextField.text = String(result)
         resultLabel.text = String(result)
         addHistory(history: History(equation: equation, result: result))
     }
@@ -27,43 +28,43 @@ extension ViewController {
 
 extension ViewController {
     @IBAction func button0(_ sender: UIButton) {
-        equationTextField.text?.append("0")
+        appendEquation(c: "0")
     }
     
     @IBAction func button1(_ sender: UIButton) {
-        equationTextField.text?.append("1")
+        appendEquation(c: "1")
     }
     
     @IBAction func button2(_ sender: UIButton) {
-        equationTextField.text?.append("2")
+        appendEquation(c: "2")
     }
     
     @IBAction func button3(_ sender: UIButton) {
-        equationTextField.text?.append("3")
+        appendEquation(c: "3")
     }
     
     @IBAction func button4(_ sender: UIButton) {
-        equationTextField.text?.append("4")
+        appendEquation(c: "4")
     }
     
     @IBAction func button5(_ sender: UIButton) {
-        equationTextField.text?.append("5")
+        appendEquation(c: "5")
     }
     
     @IBAction func button6(_ sender: UIButton) {
-        equationTextField.text?.append("6")
+        appendEquation(c: "6")
     }
     
     @IBAction func button7(_ sender: UIButton) {
-        equationTextField.text?.append("7")
+        appendEquation(c: "7")
     }
     
     @IBAction func button8(_ sender: UIButton) {
-        equationTextField.text?.append("8")
+        appendEquation(c: "8")
     }
     
     @IBAction func button9(_ sender: UIButton) {
-        equationTextField.text?.append("9")
+        appendEquation(c: "9")
     }
 }
 
@@ -132,6 +133,15 @@ extension ViewController {
         
         historyGroup = HistoryGroup()
         historyTableView.dataSource = self
+    }
+}
+
+extension ViewController {
+    func appendEquation(c: Character) {
+        if c.isNumber && (equationTextField.text == resultLabel.text) {
+            equationTextField.text?.removeAll()
+        }
+        equationTextField.text?.append(c)
     }
 }
 
