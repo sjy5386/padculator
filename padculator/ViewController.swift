@@ -116,6 +116,9 @@ extension ViewController {
             equationTextField.text?.append(")")
             brackets -= 1
         } else {
+            if equationTextField.text!.count > 0 && (equationTextField.text!.last!.isNumber || equationTextField.text?.last == ")") {
+                equationTextField.text?.append("*")
+            }
             equationTextField.text?.append("(")
             brackets += 1
         }
