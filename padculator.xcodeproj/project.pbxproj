@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F43BCA252660CC2C00C0377D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BCA242660CC2C00C0377D /* History.swift */; };
+		F43BCA282660CD7000C0377D /* HistoryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BCA272660CD7000C0377D /* HistoryGroup.swift */; };
 		F44A2E3F2650FAB60071CCCB /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A2E3E2650FAB60071CCCB /* Calculator.swift */; };
 		F44B53812650B2EA002EADAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B53802650B2EA002EADAD /* AppDelegate.swift */; };
 		F44B53832650B2EA002EADAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B53822650B2EA002EADAD /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		F43BCA242660CC2C00C0377D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F43BCA272660CD7000C0377D /* HistoryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGroup.swift; sourceTree = "<group>"; };
 		F44A2E3E2650FAB60071CCCB /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		F44B537D2650B2EA002EADAD /* padculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = padculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B53802650B2EA002EADAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				F44B538E2650B2EC002EADAD /* Info.plist */,
 				F44A2E3E2650FAB60071CCCB /* Calculator.swift */,
 				F43BCA242660CC2C00C0377D /* History.swift */,
+				F43BCA272660CD7000C0377D /* HistoryGroup.swift */,
 			);
 			path = padculator;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				F44B53852650B2EA002EADAD /* ViewController.swift in Sources */,
 				F44A2E3F2650FAB60071CCCB /* Calculator.swift in Sources */,
+				F43BCA282660CD7000C0377D /* HistoryGroup.swift in Sources */,
 				F44B53812650B2EA002EADAD /* AppDelegate.swift in Sources */,
 				F44B53832650B2EA002EADAD /* SceneDelegate.swift in Sources */,
 				F43BCA252660CC2C00C0377D /* History.swift in Sources */,
