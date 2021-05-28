@@ -18,9 +18,10 @@ class ViewController: UIViewController {
 
 extension ViewController {
     @IBAction func resultButton(_ sender: UIButton) {
-        let equation = equationTextField.text
-        let result = calculate(equation: equation!)
-        resultLabel.text = String(result!)
+        let equation = equationTextField.text!
+        let result = calculate(equation: equation)!
+        resultLabel.text = String(result)
+        addHistory(history: History(equation: equation, result: result))
     }
 }
 
@@ -143,5 +144,13 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = history.equation
         cell.detailTextLabel?.text = String(history.result)
         return cell
+    }
+}
+
+extension ViewController {
+    func addHistory(history: History) {
+        historyGroup.addHistory(history: history)
+        let indexPath = IndexPath(row: historyGroup.histories.count - 1, section: 0)
+        historyTableView.insertRows(at: [indexPath], with: .automatic)
     }
 }
