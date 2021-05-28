@@ -8,7 +8,11 @@
 import Foundation
 
 func calculate(equation: String) -> Double? {
-    let expression = NSExpression(format: equation)
+    let expression = NSExpression(format: replaceMathSymbols(equation: equation))
     let result = expression.expressionValue(with: nil, context: nil) as? Double
     return result
+}
+
+func replaceMathSymbols(equation: String) -> String {
+    return equation.replacingOccurrences(of: "^", with: "**")
 }

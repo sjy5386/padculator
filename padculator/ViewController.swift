@@ -105,7 +105,7 @@ extension ViewController {
     }
     
     @IBAction func powButton(_ sender: UIButton) {
-        equationTextField.text?.append("**")
+        equationTextField.text?.append("^")
     }
     
     @IBAction func bracketButton(_ sender: UIButton) {
