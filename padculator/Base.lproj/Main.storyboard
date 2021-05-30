@@ -405,7 +405,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="equationTextField" destination="Wsi-1q-RFZ" id="owd-LV-DU1"/>
+                        <outlet property="expressionTextField" destination="Wsi-1q-RFZ" id="owd-LV-DU1"/>
                         <outlet property="historyTableView" destination="HR4-uZ-d6H" id="mYd-pG-jCk"/>
                         <outlet property="resultLabel" destination="Dde-gE-4zk" id="nHv-Gt-ZCa"/>
                     </connections>

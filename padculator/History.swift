@@ -8,11 +8,11 @@
 import Foundation
 
 class History {
-    var equation: String
+    var expression: String
     var result: Double
     
-    init(equation: String, result: Double) {
-        self.equation = equation
+    init(expression: String, result: Double) {
+        self.expression = expression
         self.result = result
     }
 }

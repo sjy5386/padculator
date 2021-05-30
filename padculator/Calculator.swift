@@ -7,14 +7,14 @@
 
 import Foundation
 
-func calculate(equation: String) -> Double? {
-    let expression = NSExpression(format: replaceMathSymbols(equation: equation))
-    let result = expression.expressionValue(with: nil, context: nil) as? Double
+func calculate(expression: String) -> Double? {
+    let x = NSExpression(format: replaceMathSymbols(expression: expression))
+    let result = x.expressionValue(with: nil, context: nil) as? Double
     return result
 }
 
-func replaceMathSymbols(equation: String) -> String {
-    return equation.replacingOccurrences(of: "^", with: "**")
+func replaceMathSymbols(expression: String) -> String {
+    return expression.replacingOccurrences(of: "^", with: "**")
 }
 
 func doubleToString(_ d: Double) -> String {
