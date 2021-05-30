@@ -22,7 +22,7 @@ extension ViewController {
         let equation = equationTextField.text!
         if equation.count > 0 && brackets == 0 && (equation.last!.isNumber || equation.last == ")") {
             let result = calculate(equation: equation)!
-            let r = doubleToString(d: result)
+            let r = doubleToString(result)
             equationTextField.text = r
             resultLabel.text = r
             addHistory(history: History(equation: equation, result: result))
@@ -172,7 +172,7 @@ extension ViewController: UITableViewDataSource {
         
         let history = historyGroup.histories[indexPath.row]
         cell.textLabel?.text = history.equation
-        cell.detailTextLabel?.text = doubleToString(d: history.result)
+        cell.detailTextLabel?.text = doubleToString(history.result)
         return cell
     }
 }

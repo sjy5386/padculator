@@ -17,6 +17,6 @@ func replaceMathSymbols(equation: String) -> String {
     return equation.replacingOccurrences(of: "^", with: "**")
 }
 
-func doubleToString(d: Double) -> String {
+func doubleToString(_ d: Double) -> String {
     return d.remainder(dividingBy: 1.0) == 0 ? String(Int(d)) : String(d)
 }
