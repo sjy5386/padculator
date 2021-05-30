@@ -132,6 +132,12 @@ extension ViewController {
             brackets += 1
         }
     }
+    
+    @IBAction func plusMinusButton(_ sender: UIButton) {
+        if equationTextField.text!.count > 0 && (equationTextField.text!.last!.isNumber || equationTextField.text?.last == ")") {
+            equationTextField.text?.append("*(-1)")
+        }
+    }
 }
 
 extension ViewController {

@@ -305,6 +305,9 @@
                                                         <state key="normal" title="+/-">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="plusMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WM-QG-7xb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32D-he-X6h">
                                                         <rect key="frame" x="114" y="0.0" width="67" height="89"/>
