@@ -38,43 +38,43 @@ extension ViewController {
 
 extension ViewController {
     @IBAction func button0(_ sender: UIButton) {
-        appendExpression(c: "0")
+        appendExpression("0")
     }
     
     @IBAction func button1(_ sender: UIButton) {
-        appendExpression(c: "1")
+        appendExpression("1")
     }
     
     @IBAction func button2(_ sender: UIButton) {
-        appendExpression(c: "2")
+        appendExpression("2")
     }
     
     @IBAction func button3(_ sender: UIButton) {
-        appendExpression(c: "3")
+        appendExpression("3")
     }
     
     @IBAction func button4(_ sender: UIButton) {
-        appendExpression(c: "4")
+        appendExpression("4")
     }
     
     @IBAction func button5(_ sender: UIButton) {
-        appendExpression(c: "5")
+        appendExpression("5")
     }
     
     @IBAction func button6(_ sender: UIButton) {
-        appendExpression(c: "6")
+        appendExpression("6")
     }
     
     @IBAction func button7(_ sender: UIButton) {
-        appendExpression(c: "7")
+        appendExpression("7")
     }
     
     @IBAction func button8(_ sender: UIButton) {
-        appendExpression(c: "8")
+        appendExpression("8")
     }
     
     @IBAction func button9(_ sender: UIButton) {
-        appendExpression(c: "9")
+        appendExpression("9")
     }
 }
 
@@ -153,7 +153,7 @@ extension ViewController {
 }
 
 extension ViewController {
-    func appendExpression(c: Character) {
+    func appendExpression(_ c: Character) {
         if completed && c.isNumber && (expressionTextField.text == resultLabel.text) {
             expressionTextField.text?.removeAll()
             completed = false
