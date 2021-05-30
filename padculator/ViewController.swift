@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var brackets = 0
+    var brackets: Int = 0
+    var completed: Bool = true
     
     @IBOutlet weak var equationTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
@@ -25,6 +26,7 @@ extension ViewController {
             equationTextField.text = r
             resultLabel.text = r
             addHistory(history: History(equation: equation, result: result))
+            completed = true
         } else {
             let alertController = UIAlertController(title: "Error!", message: "Invalid equation.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -152,8 +154,9 @@ extension ViewController {
 
 extension ViewController {
     func appendEquation(c: Character) {
-        if c.isNumber && (equationTextField.text == resultLabel.text) {
+        if completed && c.isNumber && (equationTextField.text == resultLabel.text) {
             equationTextField.text?.removeAll()
+            completed = false
         }
         equationTextField.text?.append(c)
     }
